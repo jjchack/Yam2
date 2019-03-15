@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <!-- 编码过滤器 -->
+  <filter>
+  <filter-name>encoding</filter-name>
+  <filter-class>cn.yc.yam.filter.EncodingFilter</filter-class>
+  </filter>  
+  <filter-mapping>
+  <filter-name>encoding</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- 登录判断过滤器 -->
+  <filter>
+  <filter-name>loginjudge</filter-name>
+  <filter-class>cn.yc.yam.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>loginjudge</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GoodsUpLoad</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.GoodsUpLoad</servlet-class>
+    <init-param>
+     <param-name>uploadPath</param-name>
+     <param-value>C://Program Files (x86)//Apache Software Foundation//Tomcat 7.0//webapps//Yam//goodsimg//</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>deleteupfile</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.deleteupfile</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminLogin</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.AdminLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CancellationServlet</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.CancellationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>modifyPwd</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.modifyPwd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetGoodsList</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.GetGoodsList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteGoods</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.DeleteGoods</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUserDetail</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.GetUserDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUserList</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.GetUserList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>register</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.register</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.UserLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>IndexImgUpLoad</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.IndexImgUpLoad</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetDiffGoods</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.GetDiffGoods</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetSingleById</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.GetSingleById</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddShoppingSingle</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.AddShoppingSingle</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>WishCart</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.WishCart</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteShopById</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.DeleteShopById</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectByNameInfo</servlet-name>
+    <servlet-class>cn.yc.yam.servlet.SelectByNameInfo</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <servlet-mapping>
+    <servlet-name>GoodsUpLoad</servlet-name>
+    <url-pattern>/GoodsUpLoad</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteupfile</servlet-name>
+    <url-pattern>/deleteupfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLogin</servlet-name>
+    <url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancellationServlet</servlet-name>
+    <url-pattern>/CancellationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>modifyPwd</servlet-name>
+    <url-pattern>/modifyPwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetGoodsList</servlet-name>
+    <url-pattern>/GetGoodsList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteGoods</servlet-name>
+    <url-pattern>/DeleteGoods</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserDetail</servlet-name>
+    <url-pattern>/GetUserDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserList</servlet-name>
+    <url-pattern>/GetUserList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLogin</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexImgUpLoad</servlet-name>
+    <url-pattern>/IndexImgUpLoad</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetDiffGoods</servlet-name>
+    <url-pattern>/GetDiffGoods</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSingleById</servlet-name>
+    <url-pattern>/GetSingleById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShoppingSingle</servlet-name>
+    <url-pattern>/AddShoppingSingle</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WishCart</servlet-name>
+    <url-pattern>/WishCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteShopById</servlet-name>
+    <url-pattern>/DeleteShopById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectByNameInfo</servlet-name>
+    <url-pattern>/SelectByNameInfo</url-pattern>
+  </servlet-mapping>
+
+</web-app>
